@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Raro（ラロ）｜宮城県柴田町 プライベートサロン（ご提案用デモサイト）</title>
+<meta name="description" content="宮城県柴田町のプライベートサロン Raro。脱毛・毛穴洗浄・よもぎ蒸しをご用意し、開業準備を進めています。完全予約制・都度払いOK・子連れOK。※本ページは非公式のご提案用デモサイトです。">
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Raro",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "柴田町",
+    "addressRegion": "宮城県",
+    "addressCountry": "JP"
+  },
+  "sameAs": ["https://www.instagram.com/raro_salon/"],
+  "url": "https://imai-design.github.io/wb-9f5e2660/"
+}
+</script>
+
+<style>
+/* ============================================================
+   配色（Raro専用）。くすみローズ×よもぎセージ。
+   「誰にも会わないプライベートサロン」「よもぎ蒸し」という
+   世界観から、女性らしい柔らかさのモーヴ（くすみ紅）を主役に、
+   よもぎを思わせるくすみセージグリーンを差し色にしています。
+   ============================================================ */
+:root{
+  --ink:#3a2c30;          /* 文字の色 */
+  --sub:#8d7a7d;          /* うすい文字の色 */
+  --line:#e9dbd8;         /* 区切り線・枠の色 */
+  --bg:#faf6f4;           /* 背景の色（ほんのり血色のある生成り） */
+  --bg-soft:#f3e7e4;      /* うすい背景 */
+  --paper:#ffffff;        /* カードの背景 */
+  --mauve:#9a5566;        /* メインの色（くすみローズ） */
+  --mauve-deep:#6e3a46;   /* メイン色の濃いほう */
+  --mauve-soft:rgba(154,85,102,.10);
+  --sage:#8c9574;         /* 差し色（よもぎセージ） */
+  --sage-deep:#5f6a4c;
+
+  --radius:16px; --radius-sm:10px; --pill:999px;
+  --shadow:0 10px 34px rgba(60,30,30,.10);
+  --shadow-sm:0 4px 14px rgba(60,30,30,.07);
+  --maxw:1040px;
+  --font-display:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;
+  --font-body:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN",-apple-system,BlinkMacSystemFont,"Segoe UI",Meiryo,sans-serif;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--font-body);
+  line-height:1.9; -webkit-font-smoothing:antialiased; font-size:16px;}
+a{color:inherit;}
+h1,h2,h3{margin:0; line-height:1.55; font-weight:700; letter-spacing:.02em; font-family:var(--font-display);}
+h1{font-size:clamp(28px,6vw,42px);}
+h2{font-size:clamp(22px,3.4vw,29px);}
+h3{font-size:18px; font-weight:700; font-family:var(--font-display);}
+p{margin:0;}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px;}
+.section{padding:70px 0;}
+.section-soft{background:var(--bg-soft);}
+.lead{color:var(--sub); font-size:16.5px;}
+.eyebrow{display:inline-block; font-size:12.5px; font-weight:700; letter-spacing:.16em;
+  color:var(--mauve-deep); background:var(--mauve-soft); padding:6px 16px; border-radius:var(--pill); margin-bottom:16px;}
+.sec-head{text-align:center; max-width:620px; margin:0 auto 40px;}
+.sec-head h2{margin-bottom:12px;}
+
+/* よもぎの葉モチーフ（signature） */
+.leaf{display:inline-block; width:1em; height:1em; background:var(--sage);
+  border-radius:0 100% 0 100%; transform:rotate(45deg);}
+.leaf-dot{width:9px; height:9px; margin-right:8px; flex:none;}
+
+.btn{display:inline-block; text-decoration:none; cursor:pointer; font:inherit; font-weight:700;
+  border:0; border-radius:var(--pill); padding:15px 32px; font-size:15.5px;
+  transition:transform .15s, background .2s, box-shadow .2s;}
+.btn-primary{background:var(--mauve-deep); color:#fff; box-shadow:0 10px 24px rgba(110,58,70,.28);}
+.btn-primary:hover{background:#5a2e39; transform:translateY(-1px);}
+.btn-ghost{background:transparent; color:var(--mauve-deep); border:1.5px solid var(--mauve);}
+.btn-ghost:hover{background:var(--mauve-soft);}
+.hero .btn-primary{background:#fff; color:var(--mauve-deep); box-shadow:0 10px 24px rgba(0,0,0,.14);}
+.hero .btn-primary:hover{background:#fff8f7;}
+.hero .btn-ghost{color:#fff; border-color:rgba(255,255,255,.65);}
+.hero .btn-ghost:hover{background:rgba(255,255,255,.12);}
+
+/* 上のナビ */
+.nav{position:sticky; top:0; z-index:50; display:flex; align-items:center; gap:18px;
+  padding:14px 22px; background:color-mix(in srgb,var(--bg) 88%, transparent);
+  backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+.nav .logo{font-family:var(--font-display); font-weight:900; font-size:21px; letter-spacing:.04em; text-decoration:none; color:var(--mauve-deep);}
+.nav .menu{margin-left:auto; display:flex; gap:20px; flex-wrap:wrap;}
+.nav .menu a{text-decoration:none; color:var(--sub); font-weight:700; font-size:14px;}
+.nav .menu a:hover{color:var(--mauve-deep);}
+
+/* ヒーロー：くすみローズの帯＋湯気モチーフ（signature） */
+.hero{position:relative; overflow:hidden; background:linear-gradient(155deg, var(--mauve), var(--mauve-deep));
+  color:#fdf5f3; text-align:center; padding:86px 0 78px;}
+.hero .steam{position:absolute; border-radius:50%; filter:blur(46px); opacity:.5; pointer-events:none;}
+.hero .steam1{width:340px; height:340px; background:rgba(140,149,116,.55); top:-140px; left:-90px;}
+.hero .steam2{width:280px; height:280px; background:rgba(255,255,255,.20); bottom:-120px; right:-70px;}
+.hero .wrap{position:relative;}
+.hero .badge{display:inline-flex; align-items:center; gap:8px; font-size:12.5px; font-weight:700; letter-spacing:.1em;
+  background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.4); color:#fff;
+  padding:7px 18px; border-radius:var(--pill); margin-bottom:22px;}
+.hero .eyebrow{background:rgba(255,255,255,.16); color:#f7e9e4;}
+.hero h1{color:#fff;}
+.hero h1 .hl{color:#e8c8ce;}
+.hero .sub{color:#f2ded9; font-size:clamp(15px,1.9vw,17.5px); margin:20px auto 0; max-width:520px;}
+.hero .cta-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:32px; justify-content:center;}
+
+/* 特徴カード */
+.features{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:24px;}
+.feature{background:var(--paper); border:1px solid var(--line); border-radius:var(--radius);
+  padding:28px 22px; text-align:center; box-shadow:var(--shadow-sm);}
+.feature .no{width:44px; height:44px; margin:0 auto 14px; border-radius:50%; background:var(--mauve-soft);
+  display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:700;
+  font-family:var(--font-display); color:var(--mauve-deep);}
+.feature h3{margin-bottom:8px; font-size:16.5px;}
+.feature p{color:var(--sub); font-size:14px;}
+
+/* メニュー3本柱 */
+.menu-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:26px;}
+.menu-card{background:var(--paper); border:1px solid var(--line); border-radius:var(--radius);
+  padding:32px 26px; box-shadow:var(--shadow-sm); text-align:center;}
+.menu-card .leaf{width:34px; height:34px; margin:0 auto 16px;}
+.menu-card h3{font-size:19px; margin-bottom:10px;}
+.menu-card p{color:var(--sub); font-size:14px;}
+
+.opening-note{max-width:640px; margin:36px auto 0; text-align:center; background:var(--paper);
+  border:1px dashed var(--mauve); border-radius:var(--radius-sm); padding:20px 24px;}
+.opening-note p{font-size:14px; color:var(--mauve-deep); font-weight:700;}
+
+/* お店の情報 */
+.info{max-width:640px; margin:0 auto; background:var(--paper); border:1px solid var(--line);
+  border-radius:var(--radius); box-shadow:var(--shadow-sm); overflow:hidden;}
+.info .row{display:grid; grid-template-columns:132px 1fr; gap:0; border-bottom:1px solid var(--line);}
+.info .row:last-child{border-bottom:0;}
+.info .k{background:var(--bg-soft); color:var(--sub); font-weight:700; font-size:13.5px; padding:16px 18px;}
+.info .v{padding:16px 18px; font-size:15px;}
+.info .v a{color:var(--mauve-deep); font-weight:700; text-decoration:none;}
+
+/* 締めの帯 */
+.cta-band{background:linear-gradient(135deg, var(--sage-deep), var(--sage)); color:#fff; text-align:center; padding:72px 0;}
+.cta-band h2{color:#fff; margin-bottom:14px;}
+.cta-band p{opacity:.95; max-width:480px; margin:0 auto 26px; font-size:16px;}
+.cta-band .btn-primary{background:#fff; color:var(--sage-deep); box-shadow:0 10px 24px rgba(0,0,0,.16);}
+.cta-band .btn-primary:hover{background:#fdf9f0;}
+
+footer.site{padding:34px 0 60px; text-align:center; color:var(--sub); font-size:13px;}
+footer.site b{color:var(--ink);}
+
+/* ご提案用デモである旨のお知らせ帯 */
+.demo-banner{background:#3a2230; color:#f3e7e4; text-align:center; font-size:13px;
+  padding:10px 16px; line-height:1.6;}
+.demo-banner b{color:#fff;}
+.demo-note{max-width:640px; margin:56px auto 0; background:var(--bg-soft); border:1px solid var(--line);
+  border-radius:var(--radius-sm); padding:20px 24px; font-size:13.5px; color:var(--sub); line-height:1.9; text-align:left;}
+.demo-note b{color:var(--ink);}
+.demo-note .contact-note{margin-top:14px; padding-top:14px; border-top:1px solid var(--line);}
+.demo-note .contact-note a{color:var(--mauve-deep); font-weight:700; text-decoration:none;}
+.demo-note .credit{margin-top:14px; padding-top:14px; border-top:1px solid var(--line); font-size:12.5px;}
+.demo-note .credit a{color:var(--sub); text-decoration:underline;}
+
+/* 地図 */
+.map-wrap{max-width:640px; margin:24px auto 0; border-radius:var(--radius); overflow:hidden;
+  border:1px solid var(--line); box-shadow:var(--shadow-sm);}
+.map-wrap iframe{display:block; width:100%; height:260px; border:0;}
+
+/* ===== スマホ対応 ===== */
+@media(max-width:720px){
+  .section{padding:52px 0;}
+  .nav .menu{display:none;}
+  .info .row{grid-template-columns:104px 1fr;}
+  .hero{padding:70px 0 60px;}
+}
+@media(max-width:520px){ .wrap{padding:0 16px;} }
+
+/* ===== 動きを減らす設定を尊重 ===== */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ご提案用デモである旨のお知らせ帯（常時表示） -->
+<div class="demo-banner">
+  こちらは <b>Raro様へのご提案用に個人で作成した非公式のデモサイト</b> です。公式サイトではありません。
+</div>
+
+<!-- 上のナビ -->
+<nav class="nav">
+  <a href="#top" class="logo">Raro</a>
+  <div class="menu">
+    <a href="#about">Raroについて</a>
+    <a href="#menu">メニュー</a>
+    <a href="#info">店舗情報</a>
+  </div>
+</nav>
+
+<!-- ヒーロー（くすみローズの帯＋湯気モチーフ） -->
+<header class="hero" id="top">
+  <span class="steam steam1" aria-hidden="true"></span>
+  <span class="steam steam2" aria-hidden="true"></span>
+  <div class="wrap">
+    <span class="badge">OPENING SOON ｜ ただいま開業準備中</span><br>
+    <span class="eyebrow">宮城県柴田町 ｜ PRIVATE SALON</span>
+    <h1>だれにも会わない、<br><span class="hl">わたしだけ</span>の時間を。</h1>
+    <p class="sub">宮城県柴田町のプライベートサロン Raro。脱毛・毛穴洗浄・よもぎ蒸しで、心と体を整える時間をご用意する準備を進めています。</p>
+    <div class="cta-row">
+      <a href="https://www.instagram.com/raro_salon/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Instagramでお問い合わせ</a>
+      <a href="#menu" class="btn btn-ghost">メニューを見る</a>
+    </div>
+  </div>
+</header>
+
+<!-- Raroについて -->
+<section class="section" id="about"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow">ABOUT</span>
+    <h2>Raroについて</h2>
+    <p class="lead">宮城県柴田町で、完全予約制のプライベートサロンとして開業の準備を進めています。</p>
+  </div>
+  <div class="features">
+    <div class="feature"><div class="no">01</div><h3>完全予約制</h3><p>一組ずつのご案内なので、周りを気にせずゆっくり過ごしていただけます。</p></div>
+    <div class="feature"><div class="no">02</div><h3>都度払いOK</h3><p>回数券のご契約は不要です。ご都合に合わせて都度払いでご利用いただけます。</p></div>
+    <div class="feature"><div class="no">03</div><h3>子連れOK</h3><p>お子様とご一緒にお越しいただけます。</p></div>
+    <div class="feature"><div class="no">04</div><h3>プライベートサロン</h3><p>他のお客様と顔を合わせることのない、プライベートな空間です。</p></div>
+  </div>
+</div></section>
+
+<!-- メニュー3本柱 -->
+<section class="section section-soft" id="menu"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow">MENU</span>
+    <h2>3つのメニュー</h2>
+    <p class="lead">脱毛・毛穴洗浄・よもぎ蒸しの3つを軸にご用意する予定です。</p>
+  </div>
+  <div class="menu-grid">
+    <div class="menu-card"><span class="leaf" aria-hidden="true"></span><h3>脱毛</h3><p>むだ毛のお手入れをサポートするメニューです。</p></div>
+    <div class="menu-card"><span class="leaf" aria-hidden="true"></span><h3>毛穴洗浄</h3><p>気になる毛穴を、やさしくケアするメニューです。</p></div>
+    <div class="menu-card"><span class="leaf" aria-hidden="true"></span><h3>よもぎ蒸し</h3><p>温かい蒸気で、ゆっくりと心身を労わるメニューです。</p></div>
+  </div>
+  <div class="opening-note">
+    <p>正式なメニュー内容・料金は、物件契約後に決定次第公開いたします。今しばらくお待ちください。</p>
+  </div>
+</div></section>
+
+<!-- 店舗情報 -->
+<section class="section" id="info"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow">INFORMATION</span>
+    <h2>店舗情報</h2>
+  </div>
+  <div class="info">
+    <div class="row"><div class="k">店名</div><div class="v">Raro</div></div>
+    <div class="row"><div class="k">所在地</div><div class="v">宮城県柴田町（詳しい場所は決まり次第公開いたします）</div></div>
+    <div class="row"><div class="k">ご予約・お問い合わせ</div><div class="v"><a href="https://www.instagram.com/raro_salon/" target="_blank" rel="noopener noreferrer">Instagram（@raro_salon）のDMより承っております</a></div></div>
+    <div class="row"><div class="k">営業時間</div><div class="v">完全予約制のため、ご予約の際にご案内いたします。</div></div>
+  </div>
+  <div class="map-wrap">
+    <iframe src="https://www.google.com/maps?q=宮城県柴田町&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="宮城県柴田町の地図"></iframe>
+  </div>
+</div></section>
+
+<!-- 締めの帯 -->
+<section class="cta-band" id="contact"><div class="wrap">
+  <h2>ご予約・お問い合わせ</h2>
+  <p>現在はInstagramのDMにて承っております。開業まで、今しばらくお待ちください。</p>
+  <a href="https://www.instagram.com/raro_salon/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Instagram（@raro_salon）へ</a>
+</div></section>
+
+<footer class="site"><div class="wrap">
+  <p>&copy; 2026 <b>Raro</b></p>
+  <div class="demo-note">
+    <p><b>このページについて</b><br>
+    本ページは、Raro様の魅力をもっと多くの方に知っていただきたいという想いから、有志が個人の判断で作成した非公式のご提案・デモサイトです。Raro様の公式サイトではなく、営利目的の勧誘物でもありません。掲載情報はThreads・Instagramの公開情報をもとにしています。内容に誤りがある場合や、掲載の取り下げをご希望の場合はお気軽にお申し付けください。速やかに対応いたします。</p>
+    <p class="contact-note"><b>本デモサイトの制作・掲載取り下げに関するお問い合わせ先</b><br>
+    RYOSEIWORKS（事業主 今井涼晴）<br>
+    電話：<a href="tel:07091702819">070-9170-2819</a>　メール：<a href="mailto:info@ryoseiworld.co.jp">info@ryoseiworld.co.jp</a><br>
+    ※上記は本デモサイトの提案者の連絡先です。店舗へのご予約・お問い合わせはInstagram（@raro_salon）のDMをご利用ください。</p>
+    <p class="credit">このページは無料ホームページくん（<a href="https://freehp.jp/" target="_blank" rel="noopener noreferrer">freehp.jp</a>）で作られました。</p>
+  </div>
+</div></footer>
+
+<!-- 計測（件数のみ・個人情報は送信しない） -->
+<script>
+(function(){
+  var SLUG='raro-salon';
+  var ENDPOINT='https://hp-works-tracker.ryoseiworld.workers.dev/px';
+  var src=(location.search.indexOf('src=qr')>=0)?'qr':'url';
+  function hit(v){
+    try{
+      var k='hpw_'+v;
+      if(sessionStorage.getItem(k))return;
+      sessionStorage.setItem(k,'1');
+      fetch(ENDPOINT+'?s='+SLUG+'&v='+v+'&src='+src,{mode:'no-cors',keepalive:true});
+    }catch(e){}
+  }
+  hit('view');
+  // 通読の判定は2系統。環境によってIntersectionObserverが働かないことがあるため
+  // スクロール位置の判定も併走させる。hitは1セッション1回に絞ってあるので二重に数えない。
+  function nearBottom(){
+    try{
+      var doc=document.documentElement;
+      if(window.scrollY+window.innerHeight>=doc.scrollHeight-120)hit('read');
+    }catch(e){}
+  }
+  window.addEventListener('scroll',nearBottom,{passive:true});
+  nearBottom();
+  try{
+    var foot=document.querySelector('footer.site');
+    if(foot&&'IntersectionObserver' in window){
+      new IntersectionObserver(function(entries,obs){
+        if(entries[0].isIntersecting){hit('read');obs.disconnect();}
+      },{threshold:0.3}).observe(foot);
+    }
+  }catch(e){}
+  // 本店は電話番号が未確定のため、電話タップの代わりに
+  // Instagramへの問い合わせリンクのタップを「tel」枠で計測する。
+  document.addEventListener('click',function(e){
+    try{
+      var a=e.target.closest&&e.target.closest('a[href*="instagram.com/raro_salon"]');
+      if(a)hit('tel');
+    }catch(err){}
+  },true);
+})();
+</script>
+
+</body>
+</html>
