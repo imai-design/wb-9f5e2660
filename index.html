@@ -114,6 +114,12 @@ p{margin:0;}
   background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.4); color:#fff;
   padding:7px 18px; border-radius:var(--pill); margin-bottom:22px;}
 .hero .eyebrow{background:rgba(255,255,255,.16); color:#f7e9e4;}
+/* ヒーロー主役ロゴ：黒背景の正方形素材を円形にトリミングし、
+   薄い光彩（グロー）と白いリングで縁取ることで、ローズ背景に
+   なじませつつブランドマークとして主役に見せる */
+.hero .hero-logo{display:block; width:clamp(120px,32vw,196px); height:clamp(120px,32vw,196px);
+  margin:4px auto 26px; border-radius:50%; object-fit:cover; background:#000;
+  box-shadow:0 0 0 4px rgba(255,255,255,.55), 0 0 60px 14px rgba(255,255,255,.16), 0 16px 40px rgba(40,14,20,.35);}
 .hero h1{color:#fff;}
 .hero h1 .hl{color:#e8c8ce;}
 .hero .sub{color:#f2ded9; font-size:clamp(15px,1.9vw,17.5px); margin:20px auto 0; max-width:520px;}
@@ -225,6 +231,7 @@ footer.site b{color:var(--ink);}
   <div class="wrap">
     <span class="badge">OPENING SOON ｜ ただいま開業準備中</span><br>
     <span class="eyebrow">宮城県柴田町 ｜ PRIVATE SALON</span>
+    <img src="logo-raro.jpg" alt="Raro（ラロ）ロゴ" class="hero-logo" width="196" height="196" loading="eager" fetchpriority="high">
     <h1>だれにも会わない、<br><span class="hl">わたしだけ</span>の時間を。</h1>
     <p class="sub">宮城県柴田町のプライベートサロン Raro。脱毛・毛穴洗浄・よもぎ蒸しで、心と体を整える時間をご用意する準備を進めています。</p>
     <div class="cta-row">
