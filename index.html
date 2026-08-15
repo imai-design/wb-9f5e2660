@@ -112,10 +112,10 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--pine); outline-off
   font-size:14px; letter-spacing:.32em; color:var(--rose); font-weight:600;}
 .hero-meta{font-family:var(--font-display); font-size:14px; letter-spacing:.24em; color:var(--rose);
   margin-bottom:30px;}
-.hero-main{display:flex; align-items:center; justify-content:center; gap:clamp(14px,4vw,30px);
+.hero-main{display:flex; flex-direction:row-reverse; align-items:center; justify-content:center; gap:clamp(14px,4vw,30px);
   margin:0 auto 30px;}
 .hero-col{writing-mode:vertical-rl; text-orientation:mixed; font-size:clamp(22px,5.4vw,32px);
-  font-weight:700; letter-spacing:.34em; height:clamp(240px,32vw,330px);}
+  font-weight:700; letter-spacing:.34em; min-height:clamp(240px,32vw,330px);}
 .hero-logo{width:clamp(70px,16vw,104px); height:clamp(70px,16vw,104px); border-radius:50%;
   object-fit:cover; flex:none; box-shadow:0 0 0 1px rgba(247,243,239,.5), 0 0 0 7px rgba(247,243,239,.08);}
 .hero-sub{display:block; max-width:460px; margin:0 auto 34px; font-size:14.5px; color:#E9E1DC;
